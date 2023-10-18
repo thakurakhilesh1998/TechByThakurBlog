@@ -24,6 +24,7 @@
                         <th>Image</th>
                         <th>Status</th>
                         <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,8 +43,9 @@
                                 {{$cat->status=='1'?"Hidden":"Show"}}
                             </td>
                             <td>
-                               <a href="" class="btn btn-primary">Edit</a>
+                               <a href="{{'edit-category/'.$cat->id}}" class="btn btn-primary">Edit</a>
                             </td>
+                            <td><a href="{{'delete-category/'.$cat->id}}" class="btn btn-danger">Delete</a></td>
                         </tr>
                     @endforeach
                 </tbody>

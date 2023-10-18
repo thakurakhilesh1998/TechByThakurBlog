@@ -27,7 +27,7 @@ class CategoryFormRequest extends FormRequest
             'name'=>['required','string','max:200'],
             'slug'=>['required','string','max:200'],
             'description'=>['required'],
-            'image'=>['required','mimes:jpeg,jpg,png'],
+            'image'=>['nullable','mimes:jpeg,jpg,png'],
             'meta_title'=>['required','string','max:200'],
             'meta_description'=>['required','string'],
             'meta_keyboard'=>['required','string'],
