@@ -30,6 +30,8 @@
                         <th>
                             Status
                         </th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,6 +49,8 @@
                             <td>
                                 {{$item->status=='1'?"Hidden":"Visible"}}
                             </td>
+                            <td><a href="{{'edit-post/'.$item->id}}" class="btn btn-primary">Edit</a></td>
+                            <td><a href="{{'delete-post/'.$item->id}}" class="btn btn-danger">Delete</a></td>
                         </tr>
                     @endforeach
                 </tbody>

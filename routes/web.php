@@ -27,13 +27,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
 {
     Route::get('dashboard',[DashboardController::class,'index']);
+    // Category Route
     Route::get('category',[CategoryController::class,'index']);
     Route::get('add-category',[CategoryController::class,'create']);
     Route::post('add-category',[CategoryController::class,'store']);
     Route::get('edit-category/{category_id}',[CategoryController::class,'edit']);
     Route::put('update-category/{category_id}',[CategoryController::class,'update']);
     Route::get('delete-category/{category_id}',[CategoryController::class,'destroy']);
+    // Posts Route
     Route::get('posts',[PostsController::class,'index']);
     Route::get('add-posts',[PostsController::class,'create']);
     Route::post('add-posts',[PostsController::class,'store']);
+    Route::get('edit-post/{post_id}',[PostsController::class,'edit']);
+    Route::put('update-post/{post_id}',[PostsController::class,'update']);
+    Route::get('delete-post/{post_id}',[PostsController::class,'destroy']);
 });
