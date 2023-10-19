@@ -12,7 +12,8 @@ class PostsController extends Controller
 {
     public function index()
     {
-        return view('admin/posts/index');
+        $posts=Posts::all();
+        return view('admin/posts/index',compact('posts'));
     }
 
     public function create()
@@ -36,6 +37,6 @@ class PostsController extends Controller
         $post->status=$req['status']==true?'1':'0';
         $post->created_by=Auth::user()->id;
         $post->save();
-        return redirect('admin/post')->with("message","Post Created Successfullu");
+        return redirect('admin/posts')->with("message","Post Created Successfullu");
     }
 }
