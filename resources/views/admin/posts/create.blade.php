@@ -37,7 +37,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="description">Description</label>
-                    <textarea name="description" class="form-control"></textarea>
+                    <textarea name="description" id="des_summernote" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="yt_iframe">Youtube Link</label>

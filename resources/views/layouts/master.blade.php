@@ -16,6 +16,8 @@
     <!-- Styles -->
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -30,7 +32,18 @@
             </main>
         </div>
     </div>
+    <script src="{{asset('assets/js/jquery-3.7.1.min.js')}}"></script>
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" crossorigin="anonymous"></script>
     <script src="{{asset('assets/js/scripts.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+   
+    <script>
+        $(document).ready(function() {
+            $("#des_summernote").summernote({
+                height: 150,
+            });
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
 </body>
 </html>
