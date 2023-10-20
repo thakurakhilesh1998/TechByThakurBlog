@@ -24,6 +24,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/tutorial/{category_slug}',[FrontEndController::class,'viewCategoryPosts']);
+
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
 {
     Route::get('dashboard',[DashboardController::class,'index']);
