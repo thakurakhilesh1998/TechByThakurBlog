@@ -16,7 +16,7 @@
             @if(session('message'))
             <div class="alert alert-success">{{session('message')}}</div>
             @endif
-            <table class="table table-bordered text-center">
+            <table  id='datatable' class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th>Id</th>
