@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostsController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
     Route::get('edit-post/{post_id}',[PostsController::class,'edit']);
     Route::put('update-post/{post_id}',[PostsController::class,'update']);
     Route::get('delete-post/{post_id}',[PostsController::class,'destroy']);
+
+    // Users Route
+    Route::get('users',[UserController::class,'index']);
+    Route::get('edit-user/{user_id}',[UserController::class,'edit']);
 });
