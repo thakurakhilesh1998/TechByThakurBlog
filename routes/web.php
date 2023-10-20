@@ -46,4 +46,5 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
     // Users Route
     Route::get('users',[UserController::class,'index']);
     Route::get('edit-user/{user_id}',[UserController::class,'edit']);
+    Route::put('edit-user/{user_id}',[UserController::class,'update']);
 });

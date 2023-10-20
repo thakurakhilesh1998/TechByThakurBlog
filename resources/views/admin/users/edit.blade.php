@@ -11,7 +11,9 @@
             </h4>
         </div>
         <div class="card-body">
-          <form>
+          <form method="POST" action="{{url('admin/edit-user/'.$user->id)}}">
+            @csrf
+            @method("PUT")
             <div class="mb-3">
                 <label for="user_name">Name</label>
                 <p class="form-control">{{$user->name}}</p>
@@ -34,7 +36,6 @@
             </div>
             <button type="sumbit" class="btn btn-primary">Update User</button>
           </form>
-
         </div>
     </div>
 </div>
