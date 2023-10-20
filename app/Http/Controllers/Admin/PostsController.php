@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Posts;
 use App\Http\Requests\Admin\PostFormRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 class PostsController extends Controller
 {
     public function index()
@@ -28,7 +29,7 @@ class PostsController extends Controller
         $post=new Posts;
         $post->category_id=$data['category_id'];
         $post->name=$data['name'];
-        $post->slug=$data['slug'];
+        $post->slug=Str::slug($data['slug']);
         $post->description=$data['description'];
         $post->yt_iframe=$data['yt_iframe'];
         $post->meta_title=$data['meta_title'];
@@ -53,7 +54,7 @@ class PostsController extends Controller
         $post=Posts::find($post_id);
         $post->category_id=$data['category_id'];
         $post->name=$data['name'];
-        $post->slug=$data['slug'];
+        $post->slug=Str::slug($data['slug']);
         $post->description=$data['description'];
         $post->yt_iframe=$data['yt_iframe'];
         $post->meta_title=$data['meta_title'];
