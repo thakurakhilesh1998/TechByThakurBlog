@@ -12,7 +12,7 @@
                     @forelse ($posts as $postitem)
                     <div class="card card-shadow mt-4">
                         <div class="card-body">
-                            <a href="{{url('tutorial/'.$category->slug.'/'.$postitem->name)}}" class="text-decoration-none">
+                            <a href="{{url('tutorial/'.$category->slug.'/'.$postitem->slug)}}" class="text-decoration-none">
                                 <h2>{{$postitem->name}}</h2>
                             </a>
                             <h6>Posted On:{{$postitem->created_at->format('d/m/y')}} <span class="ms-3">Posted By:{{$postitem->user->name}}</span></h6>

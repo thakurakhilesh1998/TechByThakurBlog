@@ -14,7 +14,7 @@ class FrontEndController extends Controller
         return view('frontend/index');
     }
 
-    public function viewCategoryPosts($category_Slug)
+    public function viewCategoryPosts(string $category_Slug)
     {
         $category=Category::where('slug',$category_Slug)->where('status','0')->first();
         if($category)
@@ -25,6 +25,28 @@ class FrontEndController extends Controller
         else
         {
             return redirect('/');
+        }
+    }
+
+    public function viewPost(string $category_slug,string $post_slug)
+    {
+        $category=Category::where('slug',$category_slug)->where('status','0')->first();
+        if($category)
+        {
+            $post=Posts::where('category_id',$category->id)->where('status','0')->first();
+            if($post)
+            {
+                return view('frontend/posts/view',compact('post'));
+            }
+            else
+            {
+                return redirect('/');
+            }
+            
+        }
+        else
+        {
+            return redirec('/');
         }
     }
 }
