@@ -7,7 +7,7 @@
     <div class="py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="category-heading">
                         {!! $post->name !!}
                     </div>
@@ -21,7 +21,7 @@
                     </div>
                   
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="border p-2 mx-4">
                         <h4>Advertising Area</h4>
                     </div>
@@ -30,6 +30,16 @@
                     </div>
                     <div class="border p-2 mx-4">
                         <h4>Advertising Area</h4>
+                    </div>
+                    <div class="card mt-3 mx-4">
+                        <div class="card-header">
+                            <h4>Latest Posts</h4>
+                        </div>
+                        <div class="card-body">
+                            @foreach ($latestPosts as $item)
+                            <a href="{{url('tutorial/'.$item->category->slug.'/'.$item->slug)}}" class="text-decoration-none"><h6>{{$item->name}}</h6></a>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

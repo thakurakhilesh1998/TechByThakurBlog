@@ -33,10 +33,11 @@ class FrontEndController extends Controller
         $category=Category::where('slug',$category_slug)->where('status','0')->first();
         if($category)
         {
-            $post=Posts::where('category_id',$category->id)->where('status','0')->first();
+            $post=Posts::where('category_id',$category->id)->where('slug',$post_slug)->where('status','0')->first();
+            $latestPosts=Posts::where('category_id',$category->id)->where('status','0')->orderBy('created_at','DESC')->get()->take(6);
             if($post)
             {
-                return view('frontend/posts/view',compact('post'));
+                return view('frontend/posts/view',compact('post','latestPosts'));
             }
             else
             {
@@ -46,7 +47,7 @@ class FrontEndController extends Controller
         }
         else
         {
-            return redirec('/');
+            return redirect('/');
         }
     }
 }
