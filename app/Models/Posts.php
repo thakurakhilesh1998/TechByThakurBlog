@@ -17,4 +17,9 @@ class Posts extends Model
     {
         return $this->belongsto(Category::class,'category_id','id');
     }
+
+    public function User()
+    {
+        return $this->belongsto(User::class,'created_by','id');
+    }
 }
