@@ -1,5 +1,7 @@
 @extends('layouts/app')
-
+@section('title',"$post->meta_title")
+@section('description',"$post->meta_description")
+@section('keywords',"$post->meta_keywords")
 @section('content')
 @include('layouts/inc/frontend-navbar')
     <div class="py-4">
