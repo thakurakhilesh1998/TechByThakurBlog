@@ -84,9 +84,9 @@ class CategoryController extends Controller
         return redirect('admin/category')->with('message',"Category Updated Successfully");
     }
 
-    public function destroy($category_id)
+    public function destroy(Request $request)
     {
-        $category=Category::find($category_id);
+        $category=Category::find($request->category_id);
         if($category)
         {
             $destination='uploads/category/'.$category->image;
@@ -94,8 +94,9 @@ class CategoryController extends Controller
             {
                 File::delete($destination);
             }
+            $category->posts()->delete();
             $category->delete();
-            return redirect('admin/category')->with('message',"Category Deleted Successfully");
+            return redirect('admin/category')->with('message',"Category Deleted with its posts Successfully");
         }
     }
 }
