@@ -29,10 +29,13 @@
     <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
 </head>
 <body>
+    
     <div id="app">
+        @include('layouts/inc/frontend-navbar')
         <main class="">
             @yield('content')
         </main>
+        @include('layouts/inc/frontend-footer')
     </div>
 
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>

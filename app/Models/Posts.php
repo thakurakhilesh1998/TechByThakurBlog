@@ -13,7 +13,7 @@ class Posts extends Model
     protected $fillable=['category_id','name','slug','description','yt_iframe','meta_title',
     'meta_description','meta_keywords','status','created_by'];
 
-    public function Category()
+    public function category()
     {
         return $this->belongsto(Category::class,'category_id','id');
     }
