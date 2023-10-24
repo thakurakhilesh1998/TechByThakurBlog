@@ -9,7 +9,6 @@
             <h4>View Posts
                 <a href="{{url('admin/add-posts')}}" class="btn btn-primary btn-sm float-end">Add Posts</a>
             </h4>
-
         </div>
         <div class="card-body">
             @if(session('message'))

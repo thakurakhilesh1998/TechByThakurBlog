@@ -18,7 +18,17 @@
                             {!! $post->description !!}
                         </div>
                     </div>
-                  
+
+                    <div class="comment-area mt-4">
+                        <div class="card card-body">
+                            <h6 class="catd-title">Leave a Comment</h6>
+                            <form action="" method="post">
+                                <textarea name="comment_body" class="form-control" rows="3" required></textarea>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-md-4">
                     <div class="border p-2 mx-4">
@@ -44,4 +54,5 @@
             </div>
         </div>
     </div>
+ 
 @endsection
