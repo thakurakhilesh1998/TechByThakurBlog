@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FrontEnd\FrontEndController;
-
+use App\Http\Controllers\FrontEnd\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/tutorial/{category_slug}',[FrontEndController::class,'viewCategoryPosts']);
 Route::get('/tutorial/{category_slug}/{post_slug}',[FrontEndController::class,'viewPost']);
+Route::post('comments',[CommentController::class,'store']);
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
 {

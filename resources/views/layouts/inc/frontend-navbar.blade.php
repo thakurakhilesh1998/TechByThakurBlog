@@ -35,17 +35,19 @@
                 <a class="nav-link" href="{{url("tutorial/".$cat->slug)}}">{{$cat->name}}</a>
               </li>  
             @endforeach
-              {{-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li> --}}
+            @if(Auth::check())
+              <li>
+                <a href="{{ route('logout') }}" class="nav-link btn btn-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+                </form>
+              </li>
+              @else
+                <li>
+                  <a href="{{route('login')}}" class="nav-link">Login</a>
+                </li>
+              @endif
+
         
             </ul>
           </div>
