@@ -69,6 +69,7 @@
                             </div>
                         </div>
                     </form>
+                    <div class="text-center mt-2"><a href="{{route('register')}}">No account yet !Register Here</a></div>
                 </div>
             </div>
         </div>
