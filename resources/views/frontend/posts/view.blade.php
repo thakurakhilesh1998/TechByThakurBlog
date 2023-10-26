@@ -34,7 +34,7 @@
                             </form>
                         </div>
                         @forelse ($post->Comments as $comment)
-                         <div class="card card-body shadow-sm mt-3">
+                         <div class="comment-container card card-body shadow-sm mt-3">
                             <div class="detail-area">
                                 <h6 class="user-name mb-1">
                                     @if($comment->user)
@@ -48,8 +48,7 @@
                             </div>
                             @if(Auth::check() && Auth::id()==$comment->user_id)
                             <div>
-                                <a href="" class="btn btn-primary btn-sm me-2">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm me-2">Delete</a>
+                                <button type="submit" value="{{$comment->id}}" class="btn btn-danger btn-sm me-2 deleteComment">Delete</button>
                             </div>
                             @endif
                         </div>
@@ -86,4 +85,50 @@
         </div>
     </div>
  
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function()
+        {
+            $.ajaxSetup({
+                headers: {
+                      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+            $(document).on('click','.deleteComment',function()
+            {
+                if(confirm("Are you sure you want to delete this comment?"))
+                {
+                    var thisClicked=$(this);
+                    var comment_id=thisClicked.val();
+                    $.ajax({
+                        type:'POST',
+                        url:"{{url('delete-comment')}}",
+                        data:{
+                            'comment_id':comment_id,
+                        },
+                        sucess:function(res){
+                            alert(res.messaage)
+
+                            if(res.status==200)
+                            {
+                                thisClicked.closest('.comment-container').remove();
+                                alert(res.message);
+                            }
+                            else
+                            {
+                                alert(res.messaage);
+                            }
+                        },
+                        error:function(error)
+                        {
+                            alert(error)
+                        }
+                });
+                }
+            });
+        });
+
+    </script>
 @endsection
