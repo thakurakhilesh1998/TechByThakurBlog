@@ -108,9 +108,7 @@
                         data:{
                             'comment_id':comment_id,
                         },
-                        sucess:function(res){
-                            alert(res.messaage)
-
+                        success:function(res){
                             if(res.status==200)
                             {
                                 thisClicked.closest('.comment-container').remove();
@@ -121,9 +119,9 @@
                                 alert(res.messaage);
                             }
                         },
-                        error:function(error)
+                        error:function(xhr)
                         {
-                            alert(error)
+                            alert(xhr.responseText.messaage)
                         }
                 });
                 }
