@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('title',"TechByThakurBlog")
-@section('description',"Home Page of Bloggin Website")
-@section('keywords',"Home Page of Bloggin Website")
+@section('title',"$setting->meta_title")
+@section('description',"$setting->meta_description")
+@section('keywords',"$setting->meta_keyword")
 @section('content')
   
 

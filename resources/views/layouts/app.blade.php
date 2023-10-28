@@ -8,6 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
+    @php
+    $setting=App\Models\Setting::find(1);
+    @endphp
+    <link rel="icon" type="image/x-icon" href="{{asset('uploads/settings/favicon').'/'.$setting->favicon}}">
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
     <meta name="author" content="TechBythakur">
