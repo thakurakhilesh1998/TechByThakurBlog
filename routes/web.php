@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FrontEnd\FrontEndController;
 use App\Http\Controllers\FrontEnd\CommentController;
+use App\Http\Controllers\Admin\SettingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,4 +53,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
     Route::get('users',[UserController::class,'index']);
     Route::get('edit-user/{user_id}',[UserController::class,'edit']);
     Route::put('edit-user/{user_id}',[UserController::class,'update']);
+
+    // Setting Route
+    Route::get('settings',[SettingController::class,'index']);
+    Route::post('settings',[SettingController::class,'store']);
 });
