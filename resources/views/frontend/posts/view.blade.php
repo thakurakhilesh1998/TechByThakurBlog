@@ -34,7 +34,7 @@
                             </form>
                         </div>
                         @forelse ($post->Comments as $comment)
-                         <div class="comment-container card card-body shadow-sm mt-3">
+                         <div class="comment-container card card-body shadow-sm my-3">
                             <div class="detail-area">
                                 <h6 class="user-name mb-1">
                                     @if($comment->user)
@@ -53,7 +53,7 @@
                             @endif
                         </div>
                         @empty
-                        <div class="card card-body shadow-sm mt-3">
+                        <div class="card card-body shadow-sm my-3">
                             <h6>No comments- Yet</h6> 
                         </div>
                         @endforelse

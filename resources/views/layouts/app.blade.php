@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     
     <div id="app">
         @include('layouts/inc/frontend-navbar')
@@ -65,6 +65,6 @@
     }
 })
     </script>
-    @yield('scripts');
+    @yield('scripts')
 </body>
 </html>

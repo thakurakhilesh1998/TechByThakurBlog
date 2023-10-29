@@ -33,6 +33,7 @@ Route::post('/delete-comment',[CommentController::class,'destroy']);
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function()
 {
+    Route::get('/',[DashboardController::class,'index']);
     Route::get('dashboard',[DashboardController::class,'index']);
     // Category Route
     Route::get('category',[CategoryController::class,'index']);
