@@ -29,7 +29,7 @@
 
     <div class="py-2 bg-gray">
     <div class="container text-center">
-        &copy; Copyright at <a href="techbythakur.blog.com">TechByThakur Blog</a>
+        &copy; Copyright at <a href="techbythakur.blog.com">TechByThakur</a>
         All right reserved.
         Designed and Developed by Akhilesh Thakur.
     </div>

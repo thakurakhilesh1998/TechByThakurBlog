@@ -44,7 +44,7 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+                {{Auth::user()->role_as==1?'Admin':''}}
         </div>
     </nav>
 </div>

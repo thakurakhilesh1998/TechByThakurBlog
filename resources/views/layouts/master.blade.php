@@ -80,6 +80,6 @@
             $('#datatable').DataTable();
             } );
     </script>
-    @yield('scripts');
+    @yield('scripts')
 </body>
 </html>
