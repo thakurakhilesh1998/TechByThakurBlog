@@ -3,25 +3,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h5>TechByThakur Blog</h5>
+                <h5>TechByThakur</h5>
                 <div class="underline"></div>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>TechByThakur: Unleash Your Tech Potential
+                    TechByThakur opens the door to the dynamic world of technology and the internet. Our blog serves as your central hub for staying updated on the freshest tech trends, groundbreaking innovations, and industry advancements.
+                    We're dedicated to demystifying complex tech jargon and offering approachable insights into the digital landscape. Whether you're a tech aficionado, a curious beginner, or simply striving to thrive in the digital era, TechByThakur has your back.
+                    Explore technology with us, stay in the know, and empower yourself to navigate the fast-paced realm of tech and the internet. Welcome to TechByThakur, where technology meets simplicity.</p>
             </div>
             <div class="col-md-3 ">
                 <h5>Quick Links</h5>
                 <div class="underline"></div>
-                <div><a href="" class="text-white text-decoration-none">Home</a></div>
-                <div><a href="" class="text-white text-decoration-none">About Us</a></div>
-                <div><a href="" class="text-white text-decoration-none">Contact Us</a></div>
-                <div><a href="" class="text-white text-decoration-none">Need Help</a></div>
+                <div><a href="{{url('/')}}" class="text-white text-decoration-none">Home</a></div>
+                <div><a href="{{url('/login')}}" class="text-white text-decoration-none">Login</a></div>
+                <div><a href="{{url('/register')}}" class="text-white text-decoration-none">Register</a></div>
             </div>
             <div class="col-md-3">
                 <h5>Follow Us On:</h5>
                 <div class="underline"></div>
                 <div><a href="" class="text-white text-decoration-none">Facebook</a></div>
                 <div><a href="" class="text-white text-decoration-none">Instagram</a></div>
-                <div><a href="" class="text-white text-decoration-none">Youtube</a></div>
-                <div><a href="" class="text-white text-decoration-none">X</a></div>
+                <div><a href="" class="text-white text-decoration-none">Twitter(X)</a></div>
             </div>
         </div>
     </div>
@@ -29,9 +30,9 @@
 
     <div class="py-2 bg-gray">
     <div class="container text-center">
-        &copy; Copyright at <a href="techbythakur.blog.com">TechByThakur</a>
+        &copy; Copyright at <a href="www.techbythakur.com">TechByThakur</a>
         All right reserved.
-        Designed and Developed by Akhilesh Thakur.
+        Designed and Developed by TechByThakur.
     </div>
 </div>
 </footer>

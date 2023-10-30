@@ -5,7 +5,7 @@
               @php
               $setting=App\Models\Setting::find(1);
               @endphp
-                <img src="{{asset('uploads/settings/').'/'.$setting->logo}}" class="rounded-circle img-fluid" style="height: 120px!important" alt="logo">
+                <img src="{{asset('uploads/settings/').'/'.$setting->logo}}" class="img-fluid" style="height: 120px!important" alt="logo">
             </div>
             <div class="col-md-9">
                 <div class="border text-center p-2 my-auto">
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-green">
         <div class="container">
           <a href="" class="navbar-brand d-inline d-sm-inline d-md-none">
-            <img src="{{asset('uploads/settings/').'/'.$setting->logo}}" class="rounded-circle img-fluid" style="height: 80px!important" alt="logo">
+            <img src="{{asset('uploads/settings/').'/'.$setting->logo}}" class="img-fluid" style="height: 80px!important" alt="logo">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

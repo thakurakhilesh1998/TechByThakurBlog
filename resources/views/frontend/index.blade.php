@@ -38,11 +38,11 @@
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <h4>TechByThakur Blog</h4>
+               <h4>TechByThakur</h4>
                <div class="underline">
                </div>
-               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+               <p>TechByThakur is your gateway to the ever-evolving world of technology and the internet. Our blog is your one-stop destination for staying informed about the latest trends, breakthroughs, and innovations in the tech industry. We deliver a comprehensive and reader-friendly exploration of the digital realm, providing you with in-depth insights and updates on cutting-edge technologies, internet phenomena, and all things tech-related.
+                  At TechByThakur, we pride ourselves on translating complex tech jargon into easy-to-understand language, making it accessible to everyone. Whether you're a tech enthusiast, a curious newcomer, or someone looking to stay ahead in the digital age, we've got you covered. Explore the world of technology with us, stay informed, and empower yourself with the knowledge you need to navigate the fast-paced world of tech and the internet. Welcome to TechByThakur, where technology meets simplicity.
                </p>
             </div>
          </div>
