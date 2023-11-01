@@ -11,7 +11,7 @@
                         {!! $post->name !!}
                     </div>
                     <div class="my-2">
-                        <h6>{{$post->category->name.'/'.$post->slug}}</h6>
+                        <h6>{!!$post->category->name.'/<span style="color:blue">'.$post->slug."</span>"!!}</h6>
                     </div>
                     <div class="card card-shadow mt-4">
                         <div class="card-body post-description">
