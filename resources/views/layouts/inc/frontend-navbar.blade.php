@@ -8,9 +8,9 @@
                 <img src="{{asset('uploads/settings/').'/'.$setting->logo}}" class="img-fluid" style="height: 120px!important" alt="logo">
             </div>
             <div class="col-md-9">
-                <div class="border text-center p-2 my-auto">
+                {{-- <div class="border text-center p-2 my-auto">
                     <h4>Your Advertisment will come here</h4>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

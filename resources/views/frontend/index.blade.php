@@ -5,7 +5,7 @@
 @section('content')
   
 
-   <div class="bg-danger py-5">
+   <div class="carousel-header py-5">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
@@ -26,13 +26,15 @@
    </div>
    </div>
 
-   <div class="py-1 bg-gray">
+   {{-- Advertisment Here --}}
+   {{-- <div class="py-1 bg-gray">
       <div class="container">
          <div class="text-center p-4">
             <h4>Advertisment Here</h4>
          </div>
       </div>
-   </div>
+   </div> --}}
+
 
    <div class="py-5">
       <div class="container">
@@ -95,11 +97,13 @@
                        </div>
                      @endforeach
                   </div>
-                  <div class="col-md-4">
+                 {{-- Advertisment Here --}}
+                  {{-- <div class="col-md-4">
                      <div class="text-center border py-3">
                         <h3>Advertisment Here</h3>
                      </div>
-                  </div>
+                  </div> --}}
+
                </div>
       </div>
    </div>

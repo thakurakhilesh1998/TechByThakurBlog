@@ -61,7 +61,8 @@
 
                 </div>
                 <div class="col-md-4">
-                    <div class="border p-2 mx-4">
+                    
+                    {{-- <div class="border p-2 mx-4">
                         <h4>Advertising Area</h4>
                     </div>
                     <div class="border p-2 mx-4">
@@ -69,7 +70,9 @@
                     </div>
                     <div class="border p-2 mx-4">
                         <h4>Advertising Area</h4>
-                    </div>
+                    </div> --}}
+
+
                     <div class="card mt-3 mx-4">
                         <div class="card-header">
                             <h4>Latest Posts</h4>
